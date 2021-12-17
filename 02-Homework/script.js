@@ -31,20 +31,27 @@ var numberPrompt = function() {
     window.alert("Please enter a number 8-128");
     numberPrompt();
   }
-   pwlong = numbercheck;    // <<<<<<<<<<< This line is causing the password to not load about every 20th time and I can't for the life of me find out why.
+    window.alert("You entered " + numbercheck);
+    pwlong = numbercheck;    // <<<<<<<<<<< This line is causing the password to not load about every 20th time and I can't for the life of me find out why.
    
 }
 var lowerPrompt = function() {
   var characterPrompt1 = window.confirm("Would you like to use lowercase letters? (OK for 'yes', Cancel for  'no'.)");
   if (characterPrompt1) {
     pwChecker= pwCharacters.push(...lowercaseOptions);
+    window.alert("You chose yes");
+  } else {
+    window.alert("You chose no");
   }
-}
-
+} 
 var upperPrompt = function() {
   var characterPrompt2 = window.confirm("Would you like to use uppercase letters? (OK for 'yes', Cancel for  'no'.)");
   if (characterPrompt2) {
     pwChecker= pwCharacters.push(...uppercaseOptions);
+    window.alert("You chose yes");
+  } else {
+    window.alert("You chose no");
+
   }
 }
 
@@ -53,6 +60,9 @@ function specialPrompt() {
   var characterPrompt3 = window.confirm("Would you like to use special characters? (OK for 'yes', Cancel for  'no'.)");
   if (characterPrompt3) {
     pwChecker=pwCharacters.push(...specialCharacters);
+    window.alert("You chose yes");
+  } else {
+    window.alert("You chose no");
   }
 }
 
@@ -60,6 +70,9 @@ var digitPrompt= function() {
   var characterPrompt4= window.confirm("Would you like to use numbers? (OK for 'yes', Cancel for  'no'.)");
   if (characterPrompt4) {
       pwChecker=pwCharacters.push(...digitOptions);
+      window.alert("You chose yes");
+  } else {
+    window.alert("You chose no");
   }
 }
 
