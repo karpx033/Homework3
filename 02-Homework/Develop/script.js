@@ -1,13 +1,18 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-// var numberPrompt = window.prompt("How many digits would you like?","8-128");
-// var characterPrompt1 = window.confirm("Would you like to use lowercase letters?");
-// var characterPrompt2 = window.confirm("Would you like to use uppercase letters?");
-// var characterPromp3 = window.confirm("Would you like to use special characters?");
+
+var digitOptions = ['0','1','2', '3', '4','5', '6', '7', '8', '9']
+var lowercaseOptions = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var uppercaseOptions = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var specialCharacters = [' ' ,'!', '"', '#', '$', '%', '&', "'", '(',  ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[",']', '^', '_', "`", "{", "|", "}", "~", '"'];
+var pwlong = 0;
+var pwCharacters = [];
+var pwChecker = 0
+
 
 var numberPrompt = function() {
   var firstPrompt =window.prompt("How many digits would you like?","8-128");
-  if (!firstPrompt) {
+  if (!firstPrompt ==true) {
   window.alert("Please enter a number 8-128"); 
   numberPrompt();
   } if (firstPrompt < 8) {
@@ -48,28 +53,23 @@ var digitPrompt= function() {
   }
 }
 
-var digitOptions = ['0','1','2', '3', '4','5', '6', '7', '8', '9']
-var lowercaseOptions = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-var uppercaseOptions = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var specialCharacters = [' ' ,'!', '"', '#', '$', '%', '&', "'", '(',  ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[",']', '^', '_', "`", "{", "|", "}", "~", '"'];
-var pwlong = 0;
-var pwCharacters = [];
-var pwChecker = 0
+// function generatePassword(pwlong) {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
+
+//   passwordText.value = password;
+// }
 
 // Write password to the #password input
-function writePassword() {
-  // var password = generatePassword();
-  // var passwordText = document.querySelector("#password");
+// function writePassword() {
 
-  // passwordText.value = password;
-  numberPrompt();
- 
-}
+
+
 
 
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// generateBtn.addEventListener("click", writePassword);
 console.log(pwlong);
 console.log(pwCharacters);
 numberPrompt();
@@ -81,3 +81,9 @@ upperPrompt();
 console.log(pwCharacters);
 specialPrompt();
 console.log(pwCharacters);
+digitPrompt();
+console.log(pwCharacters);
+// generatePassword();
+for (var i = 0; i < pwlong; i++) { 
+  console.log(pwCharacters[(Math.floor(Math.random()*pwChecker))]);
+}
