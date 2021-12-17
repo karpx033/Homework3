@@ -2,11 +2,11 @@
 This app is scripted to to generate a random password for you.
 Click the button to start the function and choose how many characters long you want the password to be.
 
- Markup : - You are allowed to enable the following character options should you choose:
-              - Uppercase alphabet
-              - Lowercase alphabet
-              - special characters
-              - digits 0-9 
+- You are allowed to enable the following character options should you choose:
+    - Uppercase alphabet
+    - Lowercase alphabet
+    - special characters
+    - digits 0-9 
 
 Make your way through the prompts and your password will display in the center of the screen
 
