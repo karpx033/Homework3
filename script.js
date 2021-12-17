@@ -89,7 +89,7 @@ function generatePassword() {
 
   var passwordText = document.querySelector("#password");
   passwordText.value = pw;
-  if (pwCharacters = []) {
+  if (pw.length < 8) {
     window.alert("Please enable an alphabet");
     writePassword();
   }
