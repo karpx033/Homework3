@@ -16,17 +16,23 @@ var numberPrompt = function() {
   console.log(typeof numbercheck);
   console.log(numbercheck);
   console.log(firstPrompt);
+  console.log(typeof firstPrompt);
   if (firstPrompt === "") {
     window.alert("Please enter a number 8-128");
     numberPrompt(); 
-  } else if (firstPrompt < 8) {
+  } else if (isNaN(numbercheck)) {
+    window.alert("Please enter a number 8-128");
+    numberPrompt(); 
+  }
+  else if (numbercheck < 8) {
     window.alert("Please enter a number 8-128");
     numberPrompt();
-  } else if (firstPrompt > 128) {
+  } else if (numbercheck > 128) {
     window.alert("Please enter a number 8-128");
     numberPrompt();
   }
-  pwlong = numbercheck
+   pwlong = numbercheck;    // <<<<<<<<<<< This line is causing the password to not load about every 20th time and I can't for the life of me find out why.
+   
 }
 var lowerPrompt = function() {
   var characterPrompt1 = window.confirm("Would you like to use lowercase letters? (OK for 'yes', Cancel for  'no'.)");
