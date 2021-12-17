@@ -91,7 +91,6 @@ function generatePassword() {
   passwordText.value = pw;
   if (pw.length < 8) {
     window.alert("Please enable an alphabet");
-    writePassword();
   }
   
 }
