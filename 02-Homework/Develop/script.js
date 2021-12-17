@@ -12,17 +12,21 @@ var pwChecker = 0
 
 var numberPrompt = function() {
   var firstPrompt =window.prompt("How many digits would you like?","8-128");
-  if (!firstPrompt ==true) {
-  window.alert("Please enter a number 8-128"); 
-  numberPrompt();
-  } if (firstPrompt < 8) {
+  var numbercheck =parseInt(firstPrompt);
+  console.log(typeof numbercheck);
+  console.log(numbercheck);
+  console.log(firstPrompt);
+  if (firstPrompt === "") {
+    window.alert("Please enter a number 8-128");
+    numberPrompt(); 
+  } else if (firstPrompt < 8) {
     window.alert("Please enter a number 8-128");
     numberPrompt();
-  } if (firstPrompt > 128) {
+  } else if (firstPrompt > 128) {
     window.alert("Please enter a number 8-128");
     numberPrompt();
   }
-  pwlong = firstPrompt
+  pwlong = numbercheck
 }
 var lowerPrompt = function() {
   var characterPrompt1 = window.confirm("Would you like to use lowercase letters? (OK for 'yes', Cancel for  'no'.)");
