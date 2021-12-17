@@ -89,6 +89,10 @@ function generatePassword() {
 
   var passwordText = document.querySelector("#password");
   passwordText.value = pw;
+  if (pwCharacters = []) {
+    window.alert("Please anable an alhpabet");
+    writePassword();
+  }
   
 }
 
