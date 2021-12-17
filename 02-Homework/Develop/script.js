@@ -53,12 +53,21 @@ var digitPrompt= function() {
   }
 }
 
-// function generatePassword(pwlong) {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+function generatePassword() {
+  // var password = generatePassword();
+  
+  var testw = [];
+  for (var i=0; i<pwlong; i++) {
+    testw.push(pwCharacters[(Math.floor(Math.random()*pwChecker))]);
+  }
+  console.log(testw);
+  var pw = testw.join('');
+  console.log(pw);
 
-//   passwordText.value = password;
-// }
+  var passwordText = document.querySelector("#password");
+  passwordText.value = pw;
+  
+}
 
 // Write password to the #password input
 // function writePassword() {
@@ -83,7 +92,15 @@ specialPrompt();
 console.log(pwCharacters);
 digitPrompt();
 console.log(pwCharacters);
-// generatePassword();
-for (var i = 0; i < pwlong; i++) { 
-  console.log(pwCharacters[(Math.floor(Math.random()*pwChecker))]);
-}
+generatePassword();
+// for (var i = 0; i < pwlong; i++) { 
+//   console.log(pwCharacters[(Math.floor(Math.random()*pwChecker))]);
+// }
+
+// var testw = [];
+// for (var i=0; i<pwlong; i++) {
+// testw.push(pwCharacters[(Math.floor(Math.random()*pwChecker))]);
+// }
+// console.log(testw);
+// var finalpw = testw.join('');
+// console.log(finalpw);
