@@ -69,6 +69,18 @@ function generatePassword() {
   
 }
 
+function writePassword() {
+  numberPrompt();
+  lowerPrompt();
+  upperPrompt();
+  specialPrompt();
+  digitPrompt();
+  generatePassword();
+  console.log(pwCharacters);
+  pwlong = 0;
+  pwCharacters = [];
+  pwChecker = 0
+}
 // Write password to the #password input
 // function writePassword() {
 
@@ -78,21 +90,21 @@ function generatePassword() {
 
 
 // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
-console.log(pwlong);
-console.log(pwCharacters);
-numberPrompt();
-console.log(pwlong);
-console.log(pwCharacters);
-lowerPrompt();
-console.log(pwCharacters);
-upperPrompt();
-console.log(pwCharacters);
-specialPrompt();
-console.log(pwCharacters);
-digitPrompt();
-console.log(pwCharacters);
-generatePassword();
+generateBtn.addEventListener("click", writePassword);
+// console.log(pwlong);
+// console.log(pwCharacters);
+// numberPrompt();
+// console.log(pwlong);
+// console.log(pwCharacters);
+// lowerPrompt();
+// console.log(pwCharacters);
+// upperPrompt();
+// console.log(pwCharacters);
+// specialPrompt();
+// console.log(pwCharacters);
+// digitPrompt();
+// console.log(pwCharacters);
+// generatePassword();
 // for (var i = 0; i < pwlong; i++) { 
 //   console.log(pwCharacters[(Math.floor(Math.random()*pwChecker))]);
 // }
